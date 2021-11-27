@@ -8,6 +8,7 @@ class TitleSection extends StatelessWidget {
     return Container(
         padding: EdgeInsets.all(6),
         height: 70,
+        margin: const EdgeInsets.only(left: 40.0),
         child: Row(children: [
           Expanded(
               child: Column(children: [
@@ -16,8 +17,11 @@ class TitleSection extends StatelessWidget {
             Text('Easy to eat, but die fast',
                 style: TextStyle(color: Colors.grey)),
           ])),
-          Icon(Icons.favorite, color: Colors.red),
-          Text('41 Likes')
+          Expanded(
+              child: Column(children: [
+            Icon(Icons.favorite, color: Colors.red),
+            Text('41 Likes')
+          ])),
         ]));
   }
 }
